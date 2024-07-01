@@ -11,5 +11,11 @@ public class Main {
             // <shortcut actionId="ToggleLineBreakpoint"/> を押すといつでも他のブレークポイントを追加できます。
             System.out.println("i = " + i);
         }
+
+        RefaClass.PublisherInfo pi = new RefaClass.PublisherInfo();
+        RefaClass.BookInfo bi = new RefaClass.BookInfo();
+        RefaClass.NewBook nb = new RefaClass.NewBook();
+
+        System.out.println(nb);
     }
 }

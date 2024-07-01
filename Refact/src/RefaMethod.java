@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Refa1 {
+public class RefaMethod {
     public static void main(String[] args) {
 
         List<Integer> l1 = List.of(3, 2, 1);

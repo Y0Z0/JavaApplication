@@ -1,4 +1,4 @@
-public class Refa2 {
+public class RefaMajic {
     public static void main(String[] args) {
         //8時間超えを残業とみなす。
         double overWorkingHours1 = EmployeePrac.calculateoverWorkingHours(6);
