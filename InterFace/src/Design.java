@@ -1,8 +1,12 @@
 import java.awt.*;
 
-public abstract class Desigh {
-    static class Shape {
+public abstract class Design {
+    public static abstract class Shape {
         int size;
+
+        public Shape(int size) {
+            this.size = size;
+        }
     }
 
     public interface Drawable {
@@ -18,7 +22,7 @@ public abstract class Desigh {
         void parallelMove(int dx, int dy);
     }
 
-    public interface Movable extends Sample2.ParallelMovable {
+    public interface Movable extends ParallelMovable {
         void rotate(double angle);
     }
 }

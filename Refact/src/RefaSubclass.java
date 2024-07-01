@@ -28,4 +28,20 @@ public class RefaSubclass {
             this.typeCode = typeCode;
         }
     }
+
+    /*拡張性含めたサンプル
+    public static class Employee {
+        private String name;
+    }
+
+    class Engineer {
+        内部処理
+    }
+    class Manager {
+        内部処理
+    }
+    class Intern {
+        内部処理
+    }
+     */
 }

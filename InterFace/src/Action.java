@@ -4,18 +4,18 @@ import javax.swing.*;
 import java.util.List;
 
 public class Action extends JPanel {
-    private List<Shape.Drawable> shapes;
+    private List<Design.Drawable> shapes;
 
-    public Action(List<Shape.Drawable> shapes) {
+    public Action(List<Design.Drawable> shapes) {
         this.shapes = shapes;
 
         JButton moveTriangleButton = new JButton("三角形を平行移動");
         moveTriangleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (Shape.Drawable shape : shapes) {
+                for (Design.Drawable shape : shapes) {
                     if (shape instanceof Triangle) {
-                        ((Shape.ParallelMovable) shape).parallelMove(1, 1);
+                        ((Design.ParallelMovable) shape).parallelMove(1, 1);
                     }
                 }
                 repaint();
@@ -26,9 +26,9 @@ public class Action extends JPanel {
         moveRectangleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (Shape.Drawable shape : shapes) {
+                for (Design.Drawable shape : shapes) {
                     if (shape instanceof Rectangle) {
-                        ((Shape.ParallelMovable) shape).parallelMove(1, 1);
+                        ((Design.ParallelMovable) shape).parallelMove(1, 1);
                     }
                 }
                 repaint();
@@ -45,7 +45,7 @@ public class Action extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for (Shape.Drawable shape : shapes) {
+        for (Design.Drawable shape : shapes) {
             shape.draw(g);
         }
     }

@@ -1,9 +1,10 @@
 import java.awt.*;
 
-public class Triangle extends Desigh implements Drawable, Measurable, Movable {
+public class Triangle extends Design.Shape implements Design.Drawable, Design.Measurable, Design.Movable {
     Point p1, p2, p3;
 
     public Triangle(Point p1, Point p2, Point p3) {
+        super(0); // サイズの初期化は任意です
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
@@ -34,14 +35,15 @@ public class Triangle extends Desigh implements Drawable, Measurable, Movable {
     }
 
     @Override
-    public void rotate() {
-        double angle = 45; // 任意の回転角度
+    public void rotate(double angle) {
         double centerX = (p1.x + p2.x + p3.x) / 3.0;
         double centerY = (p1.y + p2.y + p3.y) / 3.0;
 
         p1 = rotatePoint(p1, centerX, centerY, angle);
         p2 = rotatePoint(p2, centerX, centerY, angle);
         p3 = rotatePoint(p3, centerX, centerY, angle);
+
+        System.out.println("三角形を回転しました。");
     }
 
     private Point rotatePoint(Point p, double centerX, double centerY, double angle) {
