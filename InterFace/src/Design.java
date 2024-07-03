@@ -1,13 +1,7 @@
 import java.awt.*;
 
 public abstract class Design {
-    public static abstract class Shape {
-        int size;
-
-        public Shape(int size) {
-            this.size = size;
-        }
-    }
+    int size;
 
     public interface Drawable {
         void draw(Graphics g);
@@ -23,6 +17,6 @@ public abstract class Design {
     }
 
     public interface Movable extends ParallelMovable {
-        void rotate(double angle);
+        void rotate();
     }
 }
