@@ -17,6 +17,6 @@ public abstract class Design {
     }
 
     public interface Movable extends ParallelMovable {
-        void rotate();
+        void rotate(double angle);
     }
 }

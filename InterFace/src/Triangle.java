@@ -34,8 +34,7 @@ public class Triangle extends Design implements Design.Drawable, Design.Measurab
     }
 
     @Override
-    public void rotate() {
-        double angle = 45; // 任意の回転角度
+    public void rotate(double angle) {
         double centerX = (p1.x + p2.x + p3.x) / 3.0;
         double centerY = (p1.y + p2.y + p3.y) / 3.0;
 

@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 public class Action extends JPanel {
@@ -22,6 +23,19 @@ public class Action extends JPanel {
             }
         });
 
+        JButton roundTriangleButton = new JButton("三角形を回転移動");
+        roundTriangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for (Design.Drawable shape : shapes) {
+                    if (shape instanceof Triangle) {
+                        ((Design.Movable) shape).rotate(45);
+                    }
+                }
+                repaint();
+            }
+        });
+
         JButton moveRectangleButton = new JButton("四角形を平行移動");
         moveRectangleButton.addActionListener(new ActionListener() {
             @Override
@@ -35,10 +49,25 @@ public class Action extends JPanel {
             }
         });
 
+        JButton roundRectangleButton = new JButton("四角形を回転移動");
+        roundRectangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for (Design.Drawable shape : shapes) {
+                    if (shape instanceof Rectangle) {
+                        ((Design.Movable) shape).rotate(45);
+                    }
+                }
+                repaint();
+            }
+        });
+
         this.setLayout(new BorderLayout());
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(moveTriangleButton);
+        buttonPanel.add(roundTriangleButton);
         buttonPanel.add(moveRectangleButton);
+        buttonPanel.add(roundRectangleButton);
         this.add(buttonPanel, BorderLayout.SOUTH);
     }
 
