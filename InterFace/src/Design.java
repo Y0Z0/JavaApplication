@@ -1,7 +1,8 @@
 import java.awt.*;
+import java.io.Serializable;
 
-public abstract class Design {
-    int size;
+public abstract class Design implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     public interface Drawable {
         void draw(Graphics g);

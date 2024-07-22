@@ -71,6 +71,10 @@ public class Action extends JPanel {
         this.add(buttonPanel, BorderLayout.SOUTH);
     }
 
+    public void setShapes(List<Design.Drawable> shapes) {
+        this.shapes = shapes;
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

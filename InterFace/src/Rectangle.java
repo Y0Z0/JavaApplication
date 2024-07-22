@@ -1,6 +1,7 @@
 import java.awt.*;
 
 public class Rectangle extends Design implements Design.Drawable, Design.Measurable, Design.Movable {
+    private static final long serialVersionUID = 1L;
     Point p1, p2, p3, p4;
 
     public Rectangle(Point p1, Point p2, Point p3, Point p4) {

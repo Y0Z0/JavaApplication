@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Class2 {
+public class OrderClass {
     static class Table{
         public int tableNumber;
         public int guestNumber;

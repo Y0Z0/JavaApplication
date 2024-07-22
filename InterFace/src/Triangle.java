@@ -1,6 +1,7 @@
 import java.awt.*;
 
 public class Triangle extends Design implements Design.Drawable, Design.Measurable, Design.Movable {
+    private static final long serialVersionUID = 1L;
     Point p1, p2, p3;
 
     public Triangle(Point p1, Point p2, Point p3) {

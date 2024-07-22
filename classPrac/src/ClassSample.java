@@ -1,10 +1,7 @@
 //TIP コードを<b>実行</b>するには、<shortcut actionId="Run"/> を押すか
 // ガターの <icon src="AllIcons.Actions.Execute"/> アイコンをクリックします。
 
-import java.awt.Point;
-import java.util.Date;
-
-public class Class {
+public class ClassSample {
     static class String {
 
         public static int valueOf(){

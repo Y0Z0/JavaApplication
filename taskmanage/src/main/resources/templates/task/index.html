@@ -8,6 +8,13 @@
     <body>
         <p th:text="|Hello, ${name}!|"></p>
 
+        <form action="/insert" method="post">
+            <input type="text" name="taskId" placeholder="Task ID" required>
+            <input type="text" name="taskName" placeholder="Task Name" required>
+            <button type="submit">タスク追加</button>
+        </form>
+
+
         <table>
             <thead>
             <tr>
