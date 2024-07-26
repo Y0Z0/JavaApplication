@@ -14,5 +14,5 @@ Java応用の課題ソースフォルダです。
 - **sjbc/sjbc/src~~**: Springbootのソースフォルダです。
 - **taskmanage/src~~**: Springboot(データべース操作)のソースフォルダです。
 
-# 依存関係
+### 依存関係
 - FilePracはプロジェクト構造の依存関係にlibフォルダ内のjarファイルを適用しています。
